@@ -1,8 +1,8 @@
 ---
-title       : Developing Data Products Project
-subtitle    : July 8, 2016
-author      : alaka10
-job         :   s
+title       : Predict the next word
+subtitle    : Course assignment
+author      : Alaka
+job         : 
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -11,44 +11,44 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Project Detail
+## What does the app do for you?
+====================================
+#### In this app we ask our user to select one of the three text types provided in the given dataset.
 
-A simple Shiny application has been built and published to generate the linear regression between two variables of the "mtcars" dataset.
+#### Once the user selects text type (Text or Blog or News) from the dropdown, data is loaded into memory.
 
-In this application the user chooses the predictor and outcome is always fixed as "mpg".
 
-You can view the application at
+#### The app prompts the user to start his sentence
 
-[Shiny server link:](https://www.shinyapps.io/admin/#/application/113281)
+#### you can see the the easy to use User Interface at shiny app at https://alaka10.shinyapps.io/swiftkey/
 
-[Git-hub link:](https://github.com/AlakaSar/developingdata)
 
 ---
-
-## Summary of dataset
-
-About mtcars dataset : The data was extracted from the 1974 Motor Trend US magazine, and comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles (1973-74 models).
-
-The mtcars dataset has 32 entries with 11 columns. The mileage (mpg) variation summary is as follows:
+## Faster, Better and Easy to use 
 
 
+#### Data is loaded only once for each combination of text type and initial number of words. 
 
-```
-##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-##   10.40   15.42   19.20   20.09   22.80   33.90
-```
+#### This makes word prediction super fast within the same text type, 
 
----
 
-## How it works
 
-The use select the predictor
-The user selesct a color of the regression line
-In both the cases, when the user make a choice, the plot is updated
-It also shows the summary of the predicted varibale selected
+## Intelligent and self training 
+
+#### if a combination of given words is not found in the sample set, this app is designed to train itself with the new combination.
+
+
 
 ---
+## More thoughts on improving performance 
 
-## Sample Regression
+#### If I can store the token file on amazon's cloud where 
+#### file size is not a problem and access it from  hadoop, 
+#### this program will have  no limits in terms of speed and size.
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png)
+
+
+
+
+
+
