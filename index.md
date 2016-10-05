@@ -12,7 +12,7 @@ knit        : slidify::knit2slides
 ---
 
 ## What does the app do for you?
-====================================
+
 #### In this app we ask our user to select one of the three text types provided in the given dataset.
 
 #### Once the user selects text type (Text or Blog or News) from the dropdown, data is loaded into memory.
