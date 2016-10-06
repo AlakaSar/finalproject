@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Predict the next word</title>
+  <title></title>
   <meta charset="utf-8">
-  <meta name="description" content="Predict the next word">
-  <meta name="author" content="Alaka">
+  <meta name="description" content="">
+  <meta name="author" content="">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/phone.css" 
     media="only screen and (max-device-width: 480px)" >
-  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
-  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
 
   
   <!-- Grab CDN jQuery, fall back to local if offline -->
   <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
-  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
-  <script data-main="libraries/frameworks/io2012/js/slides" 
-    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  <script>window.jQuery || document.write('<script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/slides" 
+    src="http://slidifylibraries2.googlecode.com/git/inst/libraries/frameworks/io2012/js/require-1.0.8.min.js">
   </script>
   
   
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>Predict the next word</h1>
-    <h2>Course assignment</h2>
-    <p>Alaka<br/></p>
+    <h1></h1>
+    <h2></h2>
+    <p><br/></p>
   </hgroup>
   <article></article>  
 </slide>
@@ -46,13 +46,15 @@
     <h2>What does the app do for you?</h2>
   </hgroup>
   <article data-timings="">
-    <h4>In this app we ask our user to select one of the three text types provided in the given dataset.</h4>
+    <h4>The app asks the user to select one of the three text types provided in this data</h4>
 
-<h4>Once the user selects text type (Text or Blog or News) from the dropdown, data is loaded into memory.</h4>
+<h4>Once the text type (Text or Blog or News) is selected from the dropdown,</h4>
 
-<h4>The app prompts the user to start his sentence</h4>
+<h4>relevant data is loaded into memory</h4>
 
-<h4>you can see the the easy to use User Interface at shiny app at <a href="https://alaka10.shinyapps.io/swiftkey/">https://alaka10.shinyapps.io/swiftkey/</a></h4>
+<h4>Then app prompts the user to start their sentence</h4>
+
+<h4>you can see the shiny app at <a href="https://alaka10.shinyapps.io/swiftkey/">https://alaka10.shinyapps.io/swiftkey/</a></h4>
 
   </article>
   <!-- Presenter Notes -->
@@ -60,16 +62,18 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Faster, Better and Easy to use</h2>
+    <h2>Faster, better and easy to use</h2>
   </hgroup>
   <article data-timings="">
-    <h4>Data is loaded only once for each combination of text type and initial number of words.</h4>
+    <h4>Data is loaded only once for each text type.</h4>
 
-<h4>This makes word prediction super fast within the same text type,</h4>
+<h4>Using the results of data exploration, average number of words per sentence in each type</h4>
 
-<h2>Intelligent and self training</h2>
+<p>####decides the length of ngram for that type. This helps in getting the most common sentences. </p>
 
-<h4>if a combination of given words is not found in the sample set, this app is designed to train itself with the new combination.</h4>
+<h4>Due to memory constraints on the machine, only part of the data is used in this first #### #### prediction, If the combination is not found in the first go around then the 80% of the data #### is used to search for the possible combination of words.</h4>
+
+<h4>This really helps in getting a faster prediction with small amount of resources.</h4>
 
   </article>
   <!-- Presenter Notes -->
@@ -77,14 +81,29 @@
 
 <slide class="" id="slide-3" style="background:;">
   <hgroup>
-    <h2>More thoughts on improving performance</h2>
+    <h2>Training the app to learn new combinations.</h2>
+  </hgroup>
+  <article data-timings="">
+    <h4>if a combination of given words is not found in the sample set,</h4>
+
+<h4>the app is designed to train itself with the new combination</h4>
+
+<h4>by saving the new tokens in a local text file</h4>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Another way to improve performance</h2>
   </hgroup>
   <article data-timings="">
     <h4>If I can store the token file on amazon&#39;s cloud where</h4>
 
-<h4>file size is not a problem and access it from  hadoop,</h4>
+<h4>file size is not a problem and access it via hadoop,</h4>
 
-<h4>this program will have  no limits in terms of speed and size.</h4>
+<h4>then this program has no limits in terms of speed and size.</h4>
 
   </article>
   <!-- Presenter Notes -->
@@ -102,14 +121,20 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Faster, Better and Easy to use'>
+        data-slide=2 title='Faster, better and easy to use'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='More thoughts on improving performance'>
+        data-slide=3 title='Training the app to learn new combinations.'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Another way to improve performance'>
+         4
       </a>
     </li>
   </ul>
@@ -123,7 +148,7 @@
   <!-- Load Javascripts for Widgets -->
   
   <!-- LOAD HIGHLIGHTER JS FILES -->
-  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script src="http://slidifylibraries2.googlecode.com/git/inst/libraries/highlighters/highlight.js/highlight.pack.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
   <!-- DONE LOADING HIGHLIGHTER JS FILES -->
    
