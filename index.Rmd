@@ -1,7 +1,7 @@
 ---
 Title: Data Analysis for the swiftkey files
   By Alaka Sarangdhar
-  October 4th 2016
+  October 6th 2016
   These are the slides to promote this product
   The product is the shiny app that predicts the next word using data provided by Swiftkey.
 
@@ -22,12 +22,14 @@ Title: Data Analysis for the swiftkey files
 ### Algorithm
 #### Data is loaded only once for each text type. 
 
-#### Using the results of data exploration, average number of words per sentence in each type
-#### decides the length of ngram for that type. The words typed by the user are then looked up
-#### in this ngram. If user types words that are more than the ngram allows, then another lookup #### is done on the lines read.
+#### Using the results of data exploration, average number of words per sentence in each text #### type decides the length of ngram for that type.  For performance, the ngram is stored in a
+#### file once and then data frame for sorted tokens is loaded from the file.
+#### The words typed by the user are looked up in this data frame first
+#### If user types words that are more than the ngram allows, then another lookup 
+#### is done on the lines read.
 ###  This algorithm helps in getting the most common sentences quickly
 #### Due to memory constraints on the machine, only part of the data is used in this first 
-#### prediction, If the combination is not found in the first go around then the 80% of the data #### is used to search for the possible combination of words.
+#### prediction, If the combination is not found in the first go around then the rest of the data #### searched in chunks for the possible combination of words.
 
 #### This really helps in getting a faster prediction with small amount of resources.
 
