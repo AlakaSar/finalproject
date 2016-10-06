@@ -1,54 +1,45 @@
 ---
-title       : Predict the next word
-subtitle    : Course assignment
-author      : Alaka
-job         : 
-framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
-widgets     : []            # {mathjax, quiz, bootstrap}
-mode        : selfcontained # {standalone, draft}
-knit        : slidify::knit2slides
----
-
-## What does the app do for you?
-
-#### In this app we ask our user to select one of the three text types provided in the given dataset.
-
-#### Once the user selects text type (Text or Blog or News) from the dropdown, data is loaded into memory.
-
-
-#### The app prompts the user to start his sentence
-
-#### you can see the the easy to use User Interface at shiny app at https://alaka10.shinyapps.io/swiftkey/
-
+Title: Data Analysis for the swiftkey files
+  By Alaka Sarangdhar
+  October 4th 2016
+  These are the slides to promote this product
+  The product is the shiny app that predicts the next word using data provided by Swiftkey.
 
 ---
-## Faster, Better and Easy to use 
+##  What does the app do for you?
 
-
-#### Data is loaded only once for each combination of text type and initial number of words. 
-
-#### This makes word prediction super fast within the same text type, 
-
-
-
-## Intelligent and self training 
-
-#### if a combination of given words is not found in the sample set, this app is designed to train itself with the new combination.
-
-
+#### The app asks the user to select one of the three text types provided in this data
+#### Once the text type (Text or Blog or News) is selected from the dropdown,  
+#### relevant data is loaded into memory
+#### Then app prompts the user to start their sentence
+#### you can see the shiny app at https://alaka10.shinyapps.io/swiftkey/
 
 ---
-## More thoughts on improving performance 
+
+##  Faster, better and easy to use 
+
+#### Data is loaded only once for each text type. 
+
+#### Using the results of data exploration, average number of words per sentence in each type
+####decides the length of ngram for that type. This helps in getting the most common sentences. 
+#### Due to memory constraints on the machine, only part of the data is used in this first #### #### prediction, If the combination is not found in the first go around then the 80% of the data #### is used to search for the possible combination of words.
+
+#### This really helps in getting a faster prediction with small amount of resources.
+
+---
+
+##  Training the app to learn new combinations. 
+
+#### if a combination of given words is not found in the sample set,
+#### the app is designed to train itself with the new combination
+#### by saving the new tokens in a local text file 
+
+---
+
+## Another way to improve performance 
 
 #### If I can store the token file on amazon's cloud where 
-#### file size is not a problem and access it from  hadoop, 
-#### this program will have  no limits in terms of speed and size.
-
-
-
-
-
+#### file size is not a problem and access it via hadoop, 
+#### then this program has no limits in terms of speed and size.
 
 
