@@ -6,6 +6,7 @@ Title: Data Analysis for the swiftkey files
   The product is the shiny app that predicts the next word using data provided by Swiftkey.
 
 ---
+
 ##  What does the app do for you?
 
 #### The app asks the user to select one of the three text types provided in this data
