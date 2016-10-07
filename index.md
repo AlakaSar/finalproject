@@ -1,7 +1,15 @@
 ---
 Title: Data Analysis for the swiftkey files
-  By Alaka Sarangdhar
-  October 6th 2016
+subtitle    : October 6th, 2016
+author      : alaka10
+job         :   s
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
   These are the slides to promote this product
   The product is the shiny app that predicts the next word using data provided by Swiftkey.
 
